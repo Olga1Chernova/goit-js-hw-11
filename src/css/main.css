@@ -13,7 +13,7 @@ body {
 }
 
 :root {
-    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --timing-function: linear;
     --animation-duration: 250ms;
 }
 
@@ -56,27 +56,34 @@ body {
 
 form {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 40px;
+    background-color: black;
+    height: 100px;
+}
+
+input{
+    width: 300px;
 }
 
 button {
     display: block;
     margin-left: 8px;
-    background-color: gray;
+    background-color: rgb(129, 123, 123);
     border-radius: 5px;
     border: 1px;
     padding: 3px;
     padding-left: 10px;
     padding-right: 10px;
     cursor: pointer;
+    width: 120px;
+    height: 40px;
 }
 
 button:hover {
     transition: 250ms;
-    background-color: yellow;
-
+    background-color: rgb(241, 30, 136);
 }
 
 .gallery {
@@ -91,6 +98,7 @@ a {
     color: black;
     flex-basis: calc((100% - 120px) / 4);
     border: 1px dashed black;
+    width: 100%;
 
 }
 
