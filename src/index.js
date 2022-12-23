@@ -1,5 +1,5 @@
 import { Notify } from 'notiflix';
-import NewsApiServer from './js/news-api';
+import NewsApi from './js/news-api';
 
 const refs = {
     form: document.querySelector('#search-form'),
