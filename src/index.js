@@ -29,7 +29,8 @@ async function onFormSubmit(e) {
 refs.form.addEventListener('submit', onFormSubmit);
 
 function clearMarkup() {
-  refs.gallery.innerHTML = '';
+    refs.gallery.innerHTML = '';
+    refs.loadBtn.setAttribute('disabled', true);
 }
 
 async function onLoadBtnClick() {
