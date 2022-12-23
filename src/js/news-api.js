@@ -11,7 +11,8 @@ export default class NewsApi {
     .then(data => {
       this.page +=1;
       return data;
-    });
+    })
+     .catch(error=> console.log(error));
   }
     setPage() {
     this.searchQuery = '';

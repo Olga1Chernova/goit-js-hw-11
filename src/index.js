@@ -1,15 +1,10 @@
 import { Notify } from 'notiflix';
 import NewsApi from './js/news-api';
+import {refs} from './js/refs'
 
 import SimpleLightbox from 'simplelightbox';
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-const refs = {
-    form: document.querySelector('#search-form'),
-    searchQuery: document.querySelector('input[name="searchQuery"]'),
-    loadBtn: document.querySelector('button.load-more'),
-    gallery: document.querySelector('.gallery'),
-}
 
 const newsApi = new NewsApi();
 refs.loadBtn.setAttribute('disabled', true);
@@ -17,7 +12,6 @@ refs.loadBtn.setAttribute('disabled', true);
 async function onFormSubmit(e) {
   e.preventDefault();
   clearMarkup();
- refs.loadBtn.classList.add('is-hidden');
   newsApi.searchQuery = refs.searchQuery.value.trim();
   newsApi.resetPage();
   await newsApi.getUrl().then(createMarkup).then((data) => {
